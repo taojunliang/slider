@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		ul, ol {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+		.slider-wrapper {
+			position: relative;
+			overflow: hidden;
+		}
+		.slider-container {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-transform: translate3d(0,0,0);
+					transform: translate3d(0,0,0);
+		}
+		.slider-container li a img {
+			display: block;
+			width: 100%;
+		}
+		.slider-pagination {
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			text-align: center;
+		}
+		.slider-pagination li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin-right: 10px;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+		.slider-pagination li.on {
+			opacity: 1;
+			background-color: #ccc;
+		}
+		.slider-pagination li:last-child {
+			margin-right: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="slider-wrapper">
+	<ul class="slider-container">
+		<li><a href="javascript:;"><img src="https://img2.inke.cn/MTA0NDcxNDk3ODczMjg1.jpg" alt=""></a></li>
+		<li><a href="javascript:;"><img src="https://img2.inke.cn/NjEzOTUxNDk3ODczMzgw.jpg" alt=""></a></li>
+		<li><a href="javascript:;"><img src="https://img2.inke.cn/ODUyNTkxNDk3ODcyMzMx.jpg" alt=""></a></li>
+	</ul>
+</div>
+<script src="js/slider.js"></script>
+<script>
+		
+	 var slider = new Slider('.slider-wrapper', {
+	 	pagination: true,		// 页码
+	 	//loop: true			// 循环
+	 });
+
+</script>
+</body>
+</html>
